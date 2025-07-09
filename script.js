@@ -1,4 +1,4 @@
-// Forms JavaScript - forms.js
+// Forms JavaScript - script.js
 
 // Form validation functions
 function validateEmail(email) {
@@ -296,34 +296,34 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Simple form handling
-document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const email = document.getElementById('email').value;
-  const submitBtn = document.querySelector('.form-submit-btn');
-  const successMsg = document.getElementById('successMessage');
-  const errorMsg = document.getElementById('errorMessage');
-  
-  // Hide previous messages
-  successMsg.style.display = 'none';
-  errorMsg.style.display = 'none';
-  
-  // Add loading state
-  submitBtn.classList.add('loading');
-  submitBtn.textContent = 'Senden...';
-  
-  // Simulate API call
-  setTimeout(() => {
-    // Remove loading state
-    submitBtn.classList.remove('loading');
-    submitBtn.textContent = 'Link senden';
-    
-    // Simple email validation
-    if (email && email.includes('@') && email.includes('.')) {
-      successMsg.style.display = 'block';
-      document.getElementById('email').value = '';
-    } else {
-      errorMsg.style.display = 'block';
-    }
-  }, 1500);
+document.getElementById('forgotPasswordForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const submitBtn = document.querySelector('.form-submit-btn');
+    const successMsg = document.getElementById('successMessage');
+    const errorMsg = document.getElementById('errorMessage');
+
+    // Hide previous messages
+    successMsg.style.display = 'none';
+    errorMsg.style.display = 'none';
+
+    // Add loading state
+    submitBtn.classList.add('loading');
+    submitBtn.textContent = 'Senden...';
+
+    // Simulate API call
+    setTimeout(() => {
+        // Remove loading state
+        submitBtn.classList.remove('loading');
+        submitBtn.textContent = 'Link senden';
+
+        // Simple email validation
+        if (email && email.includes('@') && email.includes('.')) {
+            successMsg.style.display = 'block';
+            document.getElementById('email').value = '';
+        } else {
+            errorMsg.style.display = 'block';
+        }
+    }, 1500);
 });
