@@ -1,4 +1,4 @@
-// Forms JavaScript - script.js
+// Forms JavaScript - ./script.js
 
 // Form validation functions
 function validateEmail(email) {
